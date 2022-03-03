@@ -13,5 +13,5 @@ const responses = [
 export default async function handler(req, res) {
 	setTimeout(() => {
 		res.send(responses[Math.floor(Math.random() * responses.length)])
-	}, 3000)
+	}, req.query.timeout)
 }

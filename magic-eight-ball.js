@@ -15,7 +15,7 @@ class SimpleDemo extends LitElement {
 	}
 
 	firstUpdated() {
-		fetch('/api')
+		fetch('/api?timeout=5000')
 			.then(res => res.text())
 			.then(res => this.value = res)
 	}
@@ -28,4 +28,4 @@ class SimpleDemo extends LitElement {
 	}
 }
 
-customElements.define('simple-demo', SimpleDemo);
+customElements.define('magic-eight-ball', SimpleDemo);
